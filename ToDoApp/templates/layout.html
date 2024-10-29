@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', path='/css/base.css')}} ?v=1.0"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', path='/css/bootstrap.css')}} ?v=1.1"
+    />
+    <meta charset="UTF-8" />
+    <title>todosApp</title>
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+    <!--    code Jinja2  -->
+    {% block content %}
+    {% endblock %}
+    <script src="{{url_for('static', path='/js/jquery-slim.js')}}"></script>
+    <script src="{{url_for('static', path='/js/popper.js')}}"></script>
+    <script src="{{url_for('static', path='/js/bootstrap.js')}}"></script>
+    <!-- &lt;!&ndash; them defer nghia la file nay duoc tai cuoi cung &ndash;&gt; -->
+    <script src="{{url_for('static', path='/js/base.js')}} ?v=1.0" defer></script>
+  </body>
+</html>
+
+<!-- dkm viet cmt jinja2 ko duoc dung { va %, nho ki nha thag loz, mat me 3 ngay  -->
+<!-- xem ki path truyen js css vao -->
